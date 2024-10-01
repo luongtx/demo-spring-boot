@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: Demo Spring with AWS
+server:
+  port: 8080
