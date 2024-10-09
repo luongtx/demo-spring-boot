@@ -4,7 +4,8 @@ phases:
   build:
     commands:
        - ./mvnw package -DskipTests
-       - cp appspec.yml target/
 artifacts:
   files:
     - target/*
+    - appspec.yml
+    - scripts/*
