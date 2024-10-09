@@ -3,4 +3,10 @@ os: linux
 files:
   - source: /
     destination: ~/target/
+hooks:
+  BeforeInstall:
+    - location: ~/target/
+      timeout: 300
+      runas: root
+      action: rm -rf .
 file_exists_behavior: OVERWRITE
