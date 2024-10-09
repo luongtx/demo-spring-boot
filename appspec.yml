@@ -4,9 +4,7 @@ files:
   - source: /
     destination: ~/target/
 hooks:
-  BeforeInstall:
-    - location: ~/target/
-      timeout: 300
-      runas: root
-      action: rm -rf .
+  AfterInstall:
+    - name: "clean up"
+      command: rm -rf ~/target/* 
 file_exists_behavior: OVERWRITE
