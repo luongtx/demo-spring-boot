@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: target/*
-    destination: ~/target
+    destination: /home/app
 hooks:
   ApplicationStop:
     - location: scripts/stop_server.sh
